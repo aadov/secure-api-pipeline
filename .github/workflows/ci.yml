@@ -22,6 +22,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Run Bandit SAST scan
+        run: bandit -r app/ -ll
+
       - name: Build Docker image
         run: docker build -t secure-api-pipeline:latest .
 
@@ -32,10 +35,3 @@ jobs:
           format: table
           exit-code: 0
           severity: HIGH,CRITICAL
-
-
-     - name: Run Bandit SAST scan
-       run: bandit -r app/ -f json -o bandit-report.json || true
-
-     - name: Show Bandit results
-       run: bandit -r app/ -ll
