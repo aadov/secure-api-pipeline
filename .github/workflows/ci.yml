@@ -25,6 +25,11 @@ jobs:
       - name: Run Bandit SAST scan
         run: bandit -r app/ -ll
 
+      - name: Run Semgrep SAST scan
+        uses: semgrep/semgrep-action@v1
+        with:
+          config: p/python
+
       - name: Build Docker image
         run: docker build -t secure-api-pipeline:latest .
 
