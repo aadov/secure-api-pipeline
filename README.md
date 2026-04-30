@@ -44,3 +44,4 @@ API доступен на `http://localhost:8000`
 - 
 ## 🌐 Live Demo
 API: http://84.235.251.208:8000/docs
+https://secure-api-aadov.duckdns.org/docs
