@@ -41,3 +41,6 @@ API доступен на `http://localhost:8000`
 - **CI/CD:** GitHub Actions
 - **SAST:** Bandit
 - **SCA:** Trivy
+- 
+## 🌐 Live Demo
+API: http://84.235.251.208:8000/docs
